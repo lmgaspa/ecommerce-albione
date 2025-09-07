@@ -103,7 +103,7 @@ class EmailReceiverService(
         val headerAuthor = """
             <p style="margin:0 0 12px"><strong>Novo pedido pago</strong> no site.</p>
             <p style="margin:0 0 4px">Cliente: ${order.firstName} ${order.lastName}</p>
-            $cpfLine
+            
             <p style="margin:0 0 4px">Email: ${order.email}</p>
             <!-- ALTERADO: incluir WhatsApp do cliente com máscara e link -->
             <p style="margin:0 0 4px">WhatsApp: <a href="$waHref">$maskedPhone</a></p>
