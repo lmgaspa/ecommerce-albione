@@ -15,8 +15,8 @@ class CorsConfig {
             // SSE: só GET neste prefixo
             registry.addMapping("/api/orders/**")
                 .allowedOriginPatterns( // aceita variações de subdomínio
-                    "https://www.agenorgasparetto.com.br",
-                    "https://agenorgasparetto.com.br",
+                    "https://www.adylsonmachado.com.br",
+                    "https://adylsonmachado.com.br",
                     "http://localhost:5173"
                 )
                 .allowedMethods("GET")

@@ -26,7 +26,7 @@ class EmailReceiverService(
         val from = System.getenv("MAIL_USERNAME") ?: authorEmail
         h.setFrom(from)
         h.setTo(authorEmail)
-        h.setSubject("Novo pedido pago (#${order.id}) – Agenor Gasparetto")
+        h.setSubject("Novo pedido pago (#${order.id}) – Adylson Machado")
         h.setText(buildHtmlMessage(order, isAuthor = true), true)
         try {
             mailSender.send(msg)

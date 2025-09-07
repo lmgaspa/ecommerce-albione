@@ -25,7 +25,7 @@ class EmailSenderService(
         val from = System.getenv("MAIL_USERNAME") ?: authorEmail
         h.setFrom(from)
         h.setTo(order.email)
-        h.setSubject("Agenor Gasparetto – Ecommerce | Pagamento confirmado (#${order.id})")
+        h.setSubject("Adylson – Ecommerce | Pagamento confirmado (#${order.id})")
         h.setText(buildHtmlMessage(order), true)
         try {
             mailSender.send(msg)
@@ -100,7 +100,7 @@ class EmailSenderService(
         <body style="font-family:Arial,Helvetica,sans-serif;background:#f6f7f9;padding:24px">
           <div style="max-width:640px;margin:0 auto;background:#fff;border:1px solid #eee;border-radius:10px;overflow:hidden">
             <div style="background:#111;color:#fff;padding:16px 20px">
-              <strong style="font-size:16px">Agenor Gasparetto – Ecommerce</strong>
+              <strong style="font-size:16px">Adylson Machado – Ecommerce</strong>
             </div>
             <div style="padding:20px">
               $headerClient

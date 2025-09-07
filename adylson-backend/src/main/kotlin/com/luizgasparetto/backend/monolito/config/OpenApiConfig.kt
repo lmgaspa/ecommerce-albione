@@ -12,9 +12,9 @@ class OpenApiConfig {
     fun customOpenAPI(): OpenAPI =
         OpenAPI().info(
             Info()
-                .title("Agenor Gasparetto – Ecommerce API")
+                .title("Adylson – Ecommerce API")
                 .version("v1")
                 .description("Endpoints do checkout Pix, webhook e catálogo")
         )
-            .servers(listOf(Server().url("https://ecommerceag-6fa0e6a5edbf.herokuapp.com")))
+            .servers(listOf(Server().url("https://ecommerce-adilson-f543f4ef7a51.herokuapp.com")))
 }
