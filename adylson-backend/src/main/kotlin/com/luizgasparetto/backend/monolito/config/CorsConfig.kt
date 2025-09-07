@@ -29,6 +29,7 @@ class CorsConfig {
             registry.addMapping("/api/**")
                 .allowedOriginPatterns(
                     "https://www.adylsonmachado.com.br",
+                    "www.adylsonmachado.com.br",
                     "http://localhost:5173"
                 )
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
