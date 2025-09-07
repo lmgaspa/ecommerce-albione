@@ -16,5 +16,5 @@ class OpenApiConfig {
                 .version("v1")
                 .description("Endpoints do checkout Pix, webhook e catálogo")
         )
-            .servers(listOf(Server().url("https://ecommerce-adilson-f543f4ef7a51.herokuapp.com/")))
+            .servers(listOf(Server().url("https://ecommerce-adilson-f543f4ef7a51.herokuapp.com")))
 }
