@@ -105,7 +105,7 @@ class EmailReceiverService(
 
         val contactBlock = """
             <p style="margin:16px 0 0;color:#555">
-              Em caso de dúvida, ou cancelamento, entre em contato com <strong>Agenor Gasparetto</strong><br>
+              Em caso de dúvida ou cancelamento, entre em contato com <strong>Agenor Gasparetto</strong><br>
               Email: <a href="mailto:ag1957@gmail.com">ag1957@gmail.com</a> · WhatsApp: <a href="https://wa.me/5571994105740">(71) 99410-5740</a>
             </p>
         """.trimIndent()
