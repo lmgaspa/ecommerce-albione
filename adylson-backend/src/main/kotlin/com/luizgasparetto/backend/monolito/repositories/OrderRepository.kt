@@ -17,12 +17,10 @@ interface OrderRepository : JpaRepository<Order, Long> {
 
     @EntityGraph(attributePaths = ["items"])
     @Query("""
-        select distinct o
+        select o
           from Order o
-          left join o.items it
          where o.paid = false
            and o.status = :status
-           and o.reserveExpiresAt is not null
            and o.reserveExpiresAt < :now
     """)
     fun findExpiredReservations(

@@ -12,7 +12,7 @@ spring:
     properties:
       hibernate:
         format_sql: true
-        jdbc.time_zone: UTC   # (opcional, bom p/ OffsetDateTime)
+        jdbc.time_zone: UTC
 
   mvc:
     async:
@@ -33,7 +33,7 @@ spring:
           starttls:
             enable: true
 
-  task:                         # NEW (opcional: pool do scheduler)
+  task:
     scheduling:
       pool:
         size: 2
@@ -69,8 +69,8 @@ springdoc:
   swagger-ui.display-request-duration: true
   swagger-ui.try-it-out-enabled: true
 
-  # NEW — configurações da reserva
-  checkout:
-    reserve:
-      ttl-seconds: ${CHECKOUT_RESERVE_TTL_SECONDS:900}  # 15 min (usado no QR e na reserva)
-      reaper-ms: ${CHECKOUT_RESERVE_REAPER_MS:60000}   # job roda a cada 60s
+# ⬇️ Fora do springdoc
+checkout:
+  reserve:
+    ttl-seconds: ${CHECKOUT_RESERVE_TTL_SECONDS:900}   # 15 min
+    reaper-ms:  ${CHECKOUT_RESERVE_REAPER_MS:60000}   # 60 s
