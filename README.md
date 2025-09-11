@@ -1,6 +1,6 @@
-📚 Ecommerce Adylson Machado Books - Fullstack
+📚 Ecommerce Albione Souza Silva Books - Fullstack
 
-This is the fullstack service for the Adilson Machado Books online store. It handles:
+This is the fullstack service for the Albione Souza Silva Books online store. It handles:
 
 PIX (brazilian digital payment), payment creation (QR Code) with using Efí Bank Integration API
 
