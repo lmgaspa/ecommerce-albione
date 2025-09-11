@@ -1,13 +1,13 @@
-import Container from '../components/common/Container';
-import ContentBlock from '../components/common/ContentBlock';
-import { useNavigate } from 'react-router-dom';
+import Container from "../components/common/Container";
+import ContentBlock from "../components/common/ContentBlock";
+import { useNavigate } from "react-router-dom";
 
 function HomePage() {
   const navigate = useNavigate();
 
   return (
     <Container>
-      <ContentBlock 
+      <ContentBlock
         title="Albione Souza Silva"
         imageUrl="/images/albione.webp"
         description="Albione Souza Silva: Nascido em Ipiaú – BA, graduado em História pela Universidade Estadual 
@@ -17,55 +17,39 @@ function HomePage() {
         isAuthor
       />
 
-      <h2 className="text-4xl font-extrabold text-primary mb-16 text-center">Livros</h2>
+      <h2 className="text-4xl font-extrabold text-primary mb-16 text-center">
+        Livros
+      </h2>
       <div className="flex flex-wrap justify-center gap-16">
-        <div onClick={() => navigate('/books/amendoeiras')}>
-          <ContentBlock 
-            title="Amendoeiras de Outono" 
-            imageUrl="/images/amendoeiras.webp" 
-            description="Romance marcante de albione Souza Silva." 
+        <div onClick={() => navigate("/books/amendoeiras")}>
+          <ContentBlock
+            title="Os despossuídos da terra – Edição especial: 100 anos de Euclides Neto"
+            imageUrl="/images/daterra.webp"
+            description="Dentre outros pontos, nesta obra tratamos das narrativas e idiossincrasias das
+     personagens rurais que Euclides Neto apresenta
+    em suas obras literárias, salientando o olhar dos silenciados e
+    excluídos da história tradicional. <br><br>Portanto, volta-se para os trabalhadores
+    e trabalhadoras que, com seu sangue, suor e lágrimas, geravam a riqueza dos
+    grandes cacauicultores baianos.<br><br>
+    Na literatura euclidiana não há exaltação
+    aos ditos “vitoriosos desbravadores”, que colonizaram as matas,
+    tornaram-se os donos do fruto do ouro e ostentavam a riqueza como troféu.<br><br>
+    Suas tramas seguem um caminho inverso, pois, em seu enredo, o fazendeiro é o
+    coadjuvante, à sombra do trabalhador.<br><br> Assim sendo, nesse prisma, com muito viço,
+    entram em cena os subalternos despossuídos da terra, anônimos, esquálidos, vivendo
+    nos ranchos de taipas, cobertos de indaiás em meio aos venerados cacauais.<br><br>
+
+Os despossuídos da terra é, portanto, um livro necessário nesses tempos sombrios, pois sugere esperança, de onde se espera apenas a aridez da luta diante de tantas adversidades. `,"
           />
         </div>
-        <div onClick={() => navigate('/books/chamaoburro')}>
-          <ContentBlock 
-            title="Chama o burro e outras crônicas de antanho" 
-            imageUrl="/images/chamaoburro.webp" 
-            description="Crônicas de antanho cheias de memória e emoção." 
-          />
-        </div>
-        <div onClick={() => navigate('/books/entrenuvensdeambar')}>
-          <ContentBlock 
-            title="Entre nuvens de âmbar" 
-            imageUrl="/images/entrenuvensdeambar.webp" 
-            description="O sonho tirano insiste e persegue." 
-          />
-        </div>
-        <div onClick={() => navigate('/books/portal')}>
-          <ContentBlock 
-            title="Portal da Piedade" 
-            imageUrl="/images/portaldapiedade.webp" 
-            description="Crônicas sensíveis sobre o cotidiano e a memória." 
-          />
-        </div>
-        <div onClick={() => navigate('/books/ocinza')}>
-          <ContentBlock 
-            title="O cinza e o silêncio" 
-            imageUrl="/images/ocinzaeosilencio.webp" 
-            description="Reflexões em meio ao silêncio e à saudade." 
-          />
-        </div>
-        <div onClick={() => navigate('/books/lambe')}>
-          <ContentBlock 
-            title="Lambe-lambe e outros contos" 
-            imageUrl="/images/lambe.webp" 
-            description="Contos cheios de vida e simplicidade." 
-          />
-        </div>
-        <div onClick={() => navigate('/books/abc')}>
-          <ContentBlock 
-            title="O abc do Cabôco" 
-            imageUrl="/images/oabcdocaboco.webp" 
-            description="Retrato popular e poético do cabôco brasileiro." 
+        <div onClick={() => navigate("/books/chamaoburro")}>
+          <ContentBlock
+            title="Cido, O Pequeno Cidadão"
+            imageUrl="/images/cido.webp"
+            description="cido: `
+    Conhecer a cultura, a história e os aspectos sociais 
+    do ambiente em que se vive são fatores imprescindíveis
+     para se construir uma consciência cidadã.<br><br> Em Cido, o pequeno cidadão percebemos todo um propósito de conhecimento envolvido por um sentimento pessoal do autor com uma memória afetiva do seu lugar de origem."
           />
         </div>
       </div>
