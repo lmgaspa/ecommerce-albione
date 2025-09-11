@@ -21,7 +21,7 @@ function HomePage() {
         Livros
       </h2>
       <div className="flex flex-wrap justify-center gap-16">
-        <div onClick={() => navigate("/books/amendoeiras")}>
+        <div onClick={() => navigate("/books/daterra")}>
           <ContentBlock
             title="Os despossuídos da terra – Edição especial: 100 anos de Euclides Neto"
             imageUrl="/images/daterra.webp"
@@ -42,12 +42,11 @@ function HomePage() {
 Os despossuídos da terra é, portanto, um livro necessário nesses tempos sombrios, pois sugere esperança, de onde se espera apenas a aridez da luta diante de tantas adversidades. `,"
           />
         </div>
-        <div onClick={() => navigate("/books/chamaoburro")}>
+        <div onClick={() => navigate("/books/cido")}>
           <ContentBlock
             title="Cido, O Pequeno Cidadão"
             imageUrl="/images/cido.webp"
-            description="cido: `
-    Conhecer a cultura, a história e os aspectos sociais 
+            description="Conhecer a cultura, a história e os aspectos sociais 
     do ambiente em que se vive são fatores imprescindíveis
      para se construir uma consciência cidadã.<br><br> Em Cido, o pequeno cidadão percebemos todo um propósito de conhecimento envolvido por um sentimento pessoal do autor com uma memória afetiva do seu lugar de origem."
           />
