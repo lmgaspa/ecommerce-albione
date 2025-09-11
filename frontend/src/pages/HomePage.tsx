@@ -8,11 +8,12 @@ function HomePage() {
   return (
     <Container>
       <ContentBlock 
-        title="Adylson Machado"
-        imageUrl="/images/adylson.webp"
-        description="Adylson Lima Machado, nasceu em Monte Alegre da Bahia (atualmente Mairi).
-        Reside em Itabuna. Advogado e professor, leciona Direito Municipal e Direito Financeiro
-        no Curso de Ciências Jurídicas da Universidade Estadual de Santa Cruz - UESC, em Ilhéus."
+        title="Albione Souza Silva"
+        imageUrl="/images/albione.webp"
+        description="Albione Souza Silva: Nascido em Ipiaú – BA, graduado em História pela Universidade Estadual 
+        de Santa Cruz (UESC), Itabuna/Ilhéus. Especialista em Educação, Cultura e Memória – Universidade
+        Estadual do Sudoeste da Bahia (UESB), Vitória da Conquista.
+        Mestre em História pela Universidade do Estado da Bahia (UNEB), campus II, Alagoinhas. Membro do Grupo de Pesquisa História, Literatura e Memória, da Universidade do Estado da Bahia. Leciona na Rede de Ensino do Estado da Bahia e na Rede Municipal de Ipiaú."
         isAuthor
       />
 
@@ -22,7 +23,7 @@ function HomePage() {
           <ContentBlock 
             title="Amendoeiras de Outono" 
             imageUrl="/images/amendoeiras.webp" 
-            description="Romance marcante de Adylson Machado." 
+            description="Romance marcante de albione Souza Silva." 
           />
         </div>
         <div onClick={() => navigate('/books/chamaoburro')}>
