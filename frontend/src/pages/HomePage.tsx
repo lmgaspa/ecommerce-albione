@@ -25,30 +25,14 @@ function HomePage() {
           <ContentBlock
             title="Os despossuídos da terra – Edição especial: 100 anos de Euclides Neto"
             imageUrl="/images/daterra.webp"
-            description="Dentre outros pontos, nesta obra tratamos das narrativas e idiossincrasias das
-     personagens rurais que Euclides Neto apresenta
-    em suas obras literárias, salientando o olhar dos silenciados e
-    excluídos da história tradicional. <br><br>Portanto, volta-se para os trabalhadores
-    e trabalhadoras que, com seu sangue, suor e lágrimas, geravam a riqueza dos
-    grandes cacauicultores baianos.<br><br>
-    Na literatura euclidiana não há exaltação
-    aos ditos “vitoriosos desbravadores”, que colonizaram as matas,
-    tornaram-se os donos do fruto do ouro e ostentavam a riqueza como troféu.<br><br>
-    Suas tramas seguem um caminho inverso, pois, em seu enredo, o fazendeiro é o
-    coadjuvante, à sombra do trabalhador.<br><br> Assim sendo, nesse prisma, com muito viço,
-    entram em cena os subalternos despossuídos da terra, anônimos, esquálidos, vivendo
-    nos ranchos de taipas, cobertos de indaiás em meio aos venerados cacauais.<br><br>
-
-Os despossuídos da terra é, portanto, um livro necessário nesses tempos sombrios, pois sugere esperança, de onde se espera apenas a aridez da luta diante de tantas adversidades. `,"
+            description="A obra destaca as narrativas das personagens rurais retratadas por Euclides Neto, dando voz aos trabalhadores silenciados e marginalizados pela história oficial. Em vez de glorificar os grandes fazendeiros do cacau, o autor coloca os camponeses no centro, mostrando sua luta, sofrimento e dignidade. Os despossuídos da terra revela a vida dos anônimos que sustentavam a riqueza baiana, tornando-se uma leitura necessária por trazer esperança mesmo em meio às adversidades."
           />
         </div>
         <div onClick={() => navigate("/books/cido")}>
           <ContentBlock
             title="Cido, O Pequeno Cidadão"
             imageUrl="/images/cido.webp"
-            description="Conhecer a cultura, a história e os aspectos sociais 
-    do ambiente em que se vive são fatores imprescindíveis
-     para se construir uma consciência cidadã.<br><br> Em Cido, o pequeno cidadão percebemos todo um propósito de conhecimento envolvido por um sentimento pessoal do autor com uma memória afetiva do seu lugar de origem."
+            description="Conhecer a cultura, a história e os aspectos sociais do lugar onde se vive é essencial para formar uma consciência cidadã. No livro Cido, o pequeno cidadão, percebe-se a intenção de transmitir esse conhecimento, envolvido por memórias afetivas do autor em relação ao seu local de origem."
           />
         </div>
       </div>

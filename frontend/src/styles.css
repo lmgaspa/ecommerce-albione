@@ -11,12 +11,12 @@
   --color-accent: oklch(0.65 0.15 80);    /* dourado/amarelo queimado, destaque */
 
   /* Fundos */
-  --color-background: oklch(0.97 0.02 20);   /* bege quase branco, leve */
-  --color-background2: oklch(0.92 0.04 30);  /* rosa-pêssego suave */
+  --color-background: #FE9920;   /* bege quase branco, leve */
+  --color-background2: #B9A44C;  /* rosa-pêssego suave */
   
   /* Textos */
-  --color-text-primary: oklch(0.20 0.03 30);  /* marrom escuro, fácil de ler */
-  --color-text-secondary: oklch(0.40 0.02 30); /* marrom médio, menos contraste */
+  --color-text-primary: #000000;  /* marrom escuro, fácil de ler */
+  --color-text-secondary: #000000; /* marrom médio, menos contraste */
 
   /* Estados */
   --color-error: oklch(0.55 0.20 20);   /* vermelho queimado */
