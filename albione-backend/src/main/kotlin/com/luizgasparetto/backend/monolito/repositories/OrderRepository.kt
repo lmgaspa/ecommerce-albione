@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.Query
 import org.springframework.data.repository.query.Param
 import java.time.OffsetDateTime
 
+// OrderRepository.kt
 interface OrderRepository : JpaRepository<Order, Long> {
 
     fun findByTxid(txid: String): Order?
@@ -15,14 +16,20 @@ interface OrderRepository : JpaRepository<Order, Long> {
     @EntityGraph(attributePaths = ["items"])
     fun findWithItemsByTxid(txid: String): Order?
 
+    // ✅ novo: carrega a Order com items por id
     @EntityGraph(attributePaths = ["items"])
-    @Query("""
+    fun findWithItemsById(id: Long): java.util.Optional<Order>
+
+    @EntityGraph(attributePaths = ["items"])
+    @Query(
+        """
         select o
           from Order o
          where o.paid = false
            and o.status = :status
            and o.reserveExpiresAt < :now
-    """)
+        """
+    )
     fun findExpiredReservations(
         @Param("now") now: OffsetDateTime,
         @Param("status") status: OrderStatus

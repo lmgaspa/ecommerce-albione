@@ -1,6 +1,7 @@
 package com.luizgasparetto.backend.monolito.services
 
 import com.luizgasparetto.backend.monolito.models.Order
+import com.luizgasparetto.backend.monolito.repositories.OrderRepository
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.mail.javamail.JavaMailSender
 import org.springframework.mail.javamail.MimeMessageHelper
@@ -11,26 +12,38 @@ import jakarta.mail.internet.MimeMessage
 class EmailService(
     private val mailSender: JavaMailSender,
     private val bookService: BookService,
-    @Value("\${email.author}") private val authorEmail: String
+    private val orderRepository: OrderRepository, // <-- injete
+    @Value("\${email.author}") private val authorEmail: String,
+    @Value("\${spring.mail.username:}") private val springMailUser: String // <-- pegue do properties
 ) {
     private val log = org.slf4j.LoggerFactory.getLogger(EmailService::class.java)
 
     fun sendClientEmail(order: Order) {
         val msg = mailSender.createMimeMessage()
         val h = MimeMessageHelper(msg, true, "UTF-8")
-        val from = System.getenv("MAIL_USERNAME") ?: authorEmail
+        val from = springMailUser.ifBlank { authorEmail }  // <-- priorize spring.mail.username
         h.setFrom(from)
         h.setTo(order.email)
         h.setSubject("Albione Souza Silva – Ecommerce | Pagamento confirmado (#${order.id})")
         h.setText(buildHtmlMessage(order, isAuthor = false), true)
-        try { mailSender.send(msg); log.info("MAIL cliente OK -> {}", order.email) }
-        catch (e: Exception) { log.error("MAIL cliente ERRO: {}", e.message, e) }
+        try {
+            mailSender.send(msg)
+            log.info("MAIL cliente OK -> {}", order.email)
+            // marque mailed_at uma única vez
+            if (order.mailedAt == null) {
+                order.mailedAt = java.time.OffsetDateTime.now()
+                // como 'order' é entidade gerenciada em geral, mas para garantir:
+                runCatching { orderRepository.save(order) }
+            }
+        } catch (e: Exception) {
+            log.error("MAIL cliente ERRO: {}", e.message, e)
+        }
     }
 
     fun sendAuthorEmail(order: Order) {
         val msg = mailSender.createMimeMessage()
         val h = MimeMessageHelper(msg, true, "UTF-8")
-        val from = System.getenv("MAIL_USERNAME") ?: authorEmail
+        val from = springMailUser.ifBlank { authorEmail }
         h.setFrom(from)
         h.setTo(authorEmail)
         h.setSubject("Novo pedido pago (#${order.id}) – Albione Souza Silva")
@@ -106,7 +119,7 @@ class EmailService(
         val contactBlock = if (!isAuthor) """
             <p style="margin:16px 0 0;color:#555">
               Em caso de cancelamento ou dúvida, entre em contato com <strong>Albione Souza Silva</strong><br>
-              Email: <a href="mailto:professoralbione@yahoo.com.br">professoralbione@yahoo.com.br</a> · WhatsApp: <a href="https://wa.me/557398143-0097">(73) 98143-0097</a>
+              Email: <a href="mailto:professoralbione@yahoo.com.br">professoralbione@yahoo.com.br</a> · WhatsApp: <a href="$waHref">$maskedPhone</a>
             </p>
         """.trimIndent() else ""
 
