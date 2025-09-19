@@ -105,8 +105,8 @@ class EmailService(
         // bloco de contato só para cliente
         val contactBlock = if (!isAuthor) """
             <p style="margin:16px 0 0;color:#555">
-              Em caso de cancelamento ou dúvida, entre em contato com <strong>Agenor Gasparetto</strong><br>
-              Email: <a href="mailto:ag1957@gmail.com">ag1957@gmail.com</a> · WhatsApp: <a href="https://wa.me/5571991974445">(71) 99197-4445</a>
+              Em caso de cancelamento ou dúvida, entre em contato com <strong>Albione Souza Silva</strong><br>
+              Email: <a href="mailto:professoralbione@yahoo.com.br">professoralbione@yahoo.com.br</a> · WhatsApp: <a href="https://wa.me/557398143-0097">(73) 98143-0097</a>
             </p>
         """.trimIndent() else ""
 
